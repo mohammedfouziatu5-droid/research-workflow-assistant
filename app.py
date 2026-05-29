@@ -1,3 +1,12 @@
+# From your project root
+echo "streamlit
+pandas
+pdfplumber
+openpyxl" > requirements.txt
+
+git add requirements.txt
+git commit -m "Fix: add requirements.txt"
+git push
 import streamlit as st
 import pandas as pd
 import pdfplumber
