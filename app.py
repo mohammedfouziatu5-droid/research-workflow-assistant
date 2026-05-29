@@ -12,6 +12,12 @@ st.write("Upload PDF research papers to extract key study information.")
 # -----------------------------
 # PDF TEXT EXTRACTION
 # -----------------------------
+# -----------------------------
+
+# PDF TEXT EXTRACTION
+
+# -----------------------------
+
 def extract_text_from_pdf(pdf_file):
 text = ""
 
