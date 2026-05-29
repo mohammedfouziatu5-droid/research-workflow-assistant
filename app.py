@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import fitz  # PyMuPDF
+import pdfplumber
 import re
 from io import BytesIO
 
@@ -13,15 +13,18 @@ st.write("Upload PDF research papers to extract key study information.")
 # PDF TEXT EXTRACTION
 # -----------------------------
 def extract_text_from_pdf(pdf_file):
-    text = ""
+text = ""
 
-    pdf_bytes = pdf_file.read()
-    pdf_document = fitz.open(stream=pdf_bytes, filetype="pdf")
+```
+with pdfplumber.open(pdf_file) as pdf:
+    for page in pdf.pages:
+        extracted = page.extract_text()
 
-    for page in pdf_document:
-        text += page.get_text()
+        if extracted:
+            text += extracted
 
-    return text
+return text
+```
 
 
 # -----------------------------
