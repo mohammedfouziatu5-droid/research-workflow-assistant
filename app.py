@@ -1,9 +1,8 @@
-import streamlit as st
+mport streamlit as st
 import pandas as pd
-import pdfplumber
+import  PyMuPDF
 import re
 from io import BytesIO
-
 st.set_page_config(page_title="Research Workflow Assistant", layout="wide")
 
 st.title("Research Workflow Assistant")
