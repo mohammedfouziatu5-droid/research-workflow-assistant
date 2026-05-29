@@ -12,10 +12,11 @@ st.write("Upload PDF research papers to extract key study information.")
 # -----------------------------
 # PDF TEXT EXTRACTION
 # -----------------------------
-# -----------------------------
-def    extract_text_from_pdf(pdf_file):
+
+def extract_text_from_pdf(pdf_file):
 text = ""
 
+```
 with pdfplumber.open(pdf_file) as pdf:
     for page in pdf.pages:
         extracted = page.extract_text()
@@ -24,6 +25,7 @@ with pdfplumber.open(pdf_file) as pdf:
             text += extracted
 
 return text
+```
 
 # -----------------------------
 # SIMPLE INFORMATION EXTRACTORS
