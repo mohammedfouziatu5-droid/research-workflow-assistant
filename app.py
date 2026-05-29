@@ -14,10 +14,6 @@ st.write("Upload PDF research papers to extract key study information.")
 # -----------------------------
 # -----------------------------
 
-# PDF TEXT EXTRACTION
-
-# -----------------------------
-
 def extract_text_from_pdf(pdf_file):
 text = ""
 
@@ -31,6 +27,7 @@ with pdfplumber.open(pdf_file) as pdf:
 
 return text
 ```
+
 
 
 # -----------------------------
